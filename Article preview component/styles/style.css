@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+:root{
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-grayish-blue);
+}
+
+ul{
+    list-style: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Card */
+
+.container{
+    margin-top: 56px;
+}
+
+.container>.card{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    width: 665px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 30px 50px #d1d6dc;
+}
+
+.container>.card>.card-img{
+    background-image: url('../images/drawers.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 39%;
+    background-position-x: 0px;
+    border-radius: 10px 0 0 10px;
+}
+
+
+
+section{
+    display: flex;
+    align-items: center;
+}
+
+.container>.card>.card-body{
+    width: 61%;
+    padding: 30px 36px;
+}
+
+.container>.card>.card-body>h2{
+    line-height: 25px;
+    letter-spacing: 0.1px;
+    color: var(--very-dark-grayish-blue);
+}
+
+.container>.card>.card-body>p{
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--desaturated-dark-blue);
+}
+
+.container>.card>.card-body>.row{
+    position: relative;
+}
+
+.container>.card>.card-body>.row>.about{
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.container>.card>.card-body>.row>.about>div{
+    display: flex;
+    align-items: center;
+}
+
+.container>.card>.card-body>.row>.about>div>img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 11px;
+}
+
+.container>.card>.card-body>.row>.about>div>article>h3{
+    font-size: 11.5px;
+}
+
+.container>.card>.card-body>.row>.about>div>article>p{ 
+    font-size: 12px;
+    margin-top: 1px;
+    color: var(--desaturated-dark-blue);
+}
+
+.container>.card>.card-body>.row>.about>button{
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Share */
+#share{
+    justify-content: space-between;
+    color: var(--grayish-blue);
+    position: absolute;
+    top: -69px;
+    right: -97px;
+    padding: 0 32px;
+    width: 227px;
+    height: 50.63px;
+    border-radius: 10px;
+    z-index: 999;
+    background-color: var(--very-dark-grayish-blue);
+    transition: 0.4s ease;
+}
+
+#share>button{
+    display: none;
+}
+
+.container>.card>.card-body>.row>.share{
+    display: none;
+}
+
+.container>.card>.card-body>.row>.share-active{
+    display: flex;
+}
+
+.container>.card>.card-body>.row>#share>p{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.container>.card>.card-body>.row>#share>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 52%;
+    align-items: center;
+}
+
+#share>.edge{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    border-top: 35px solid #48556a;
+    bottom: -11px;
+    left: 81px;
+    z-index: -1;
+}
+
+
+@media (max-width: 850px) {
+    .container{
+        margin-top: 10px;
+    }
+
+    .container>.card{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .container>.card>.card-img{
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container>.card>.card-body{
+        width: 100%;
+    }
+
+    .container>.card>.card-body>.row>.about {
+        margin-top: 30px;
+    }
+
+    /* Share */
+    #share{
+        justify-content: space-between;
+        color: var(--grayish-blue);
+        position: absolute;
+        top: -18px;
+        right: 50%;
+        margin-right: -45vw;
+        padding: 0 32px;
+        width: 90vw;
+        height: 87.63px;
+        border-radius: 0 0 10px 10px;
+        z-index: 999;
+        background-color: var(--very-dark-grayish-blue);
+        transition: 0.4s ease;
+    }
+
+    #share>button{
+        display: block;
+        background-color: var(--light-grayish-blue);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        margin-right: 4px;
+    }
+
+    .container>.card>.card-body>.row>.share{
+        display: none;
+    }
+
+    .container>.card>.card-body>.row>.share-active{
+        display: flex;
+    }
+
+    .container>.card>.card-body>.row>#share>p{
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .container>.card>.card-body>.row>#share>ul{
+        display: flex;
+        justify-content: space-between;
+        width: 42%;
+        align-items: center;
+    }
+
+    #share>.edge{
+        display: none;
+    }
+
+}

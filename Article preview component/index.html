@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <h2>
+          Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home
+        </h2>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.
+        </p>
+        <div class="row">
+          <section class="about">
+            <div>
+              <img src="./images/avatar-michelle.jpg" alt="avatar">
+              <article>
+                <h3>Michelle Appleton</h3>
+                <p>28 Jun 2020</p>
+              </article>
+            </div>
+            <button onclick="share()"><img src="./images/icon-share.svg" alt="share"></button>
+          </section>
+          
+          <section class="share" id="share">
+            <p>Share</p>
+            <ul>
+              <li><a href="#"><img src="./images/icon-facebook.svg" alt="fb"></a></li>
+              <li><a href="#"><img src="./images/icon-twitter.svg" alt="twit"></a></li>
+              <li><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a></li>
+            </ul>
+            <button onclick="share()"><img src="./images/icon-share.svg" alt="share"></button>
+            <div class="edge"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Jahongirhacking">Jahongir Hayitov</a>.
+  </div>
+  
+
+  <script src="./script/app.js"></script>
+</body>
+</html>

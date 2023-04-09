@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: hsl(206deg 47% 93%);
+}
+
+:root{
+    --yellow: hsl(71, 73%, 54%);
+    --green: hsl(179, 62%, 43%);
+    --gray: hsl(204, 43%, 93%);
+    --blue: hsl(218, 22%, 67%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.container{
+    width: 635px;
+    margin: auto;
+    margin-right: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -237px;
+    margin-left: -317px;
+    box-shadow: 0px 7px 26px #00000061;
+    border-radius: 10px;
+}
+
+/* Header */
+
+.container>.header{
+    background-color: white;
+    margin: 0;
+    padding: 35px;
+    border-radius: 10px 10px 0 0;
+}
+
+.container>.header>h3{
+    margin: 0;
+    color: var(--green);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 6px;
+    margin-bottom: 23px;
+}
+
+.container>.header>.free{
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 18.5px;
+    margin-bottom: 12px;
+}
+
+.container>.header>.info{
+    color: var(--blue);
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+
+/* Bottom */
+
+.container>.bottom>*{
+    margin: 0;
+    padding: 40px;
+}
+
+.container>.bottom{
+    display: flex;
+    margin: 0;
+    color: white;
+}
+
+/* Left */
+
+.container>.bottom>.sign_up-left{
+    background-color: #2bb3b1;
+    width: 50%;
+    border-radius: 0 0 0 10px;
+}
+
+.container>.bottom>.sign_up-left>h4{
+    font-size: 19px;
+    font-weight: 550;
+    margin-bottom: 17px;
+}
+
+.container>.bottom>.sign_up-left>p.cost{
+    align-items: center;
+    display: flex;
+    color: rgba(255, 255, 255, 0.631);
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.container>.bottom>.sign_up-left>p.cost>span{
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.container>.bottom>.sign_up-left>p.info{
+    font-weight: 400;
+    margin-bottom: 27px;
+}
+
+.container>.bottom>.sign_up-left>a.button{
+    color: white;
+    text-decoration: none;
+    background-color: var(--yellow);
+    padding: 15px 90px;
+    border-radius: 5px;
+    box-shadow: 7px 9px 10px #52525236;
+    display: block;
+}
+
+/* Right */
+
+.container>.bottom>.why_us-right{
+    background-color: #4abebd;
+    width: 50%;
+    border-radius: 0 0 10px 0;
+}
+
+.container>.bottom>.why_us-right>h4{    
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.container>.bottom>.why_us-right>.info{
+    font-size: 14px;
+    line-height: 19px;
+    color: #ffffffb8;
+}
+
+
+footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+@media (max-width: 700px) {
+
+    .container{
+        width: 300px;
+        margin: auto;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        box-shadow: 0px 7px 26px #00000061;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+
+    /* Header */
+
+    .container>.header{
+        background-color: white;
+        margin: 0;
+        padding: 25px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container>.header>h3{
+        margin: 0;
+        color: var(--green);
+        font-size: 19px;
+        font-weight: 700;
+        margin-top: 6px;
+        margin-bottom: 23px;
+    }
+
+    .container>.header>.free{
+        color: var(--yellow);
+        font-weight: 700;
+        font-size: 14.5px;
+        margin-bottom: 12px;
+    }
+
+    .container>.header>.info{
+        color: var(--blue);
+        font-weight: 400;
+        line-height: 25px;
+        margin-bottom: 5px;
+        font-size: 12px;
+    
+    }
+
+    /* Bottom */
+
+    .container>.bottom>*{
+        margin: 0;
+        padding: 25px;
+    }
+
+    .container>.bottom{
+        display: block;
+        margin: 0;
+        color: white;
+    }
+
+    /* Left */
+
+    .container>.bottom>.sign_up-left{
+        background-color: #2bb3b1;
+        width: 100%;
+        border-radius: 0 0 0 0;
+    }
+
+    .container>.bottom>.sign_up-left>h4{
+        font-size: 17px;
+        font-weight: 550;
+        margin-bottom: 17px;
+    }
+
+    .container>.bottom>.sign_up-left>p.cost{
+        align-items: center;
+        display: flex;
+        color: rgba(255, 255, 255, 0.631);
+        font-weight: 400;
+        margin-bottom: 9px;
+        font-size: 14px;
+    
+    }
+
+    .container>.bottom>.sign_up-left>p.cost>span{
+        font-weight: bold;
+        font-size: 30px;
+        display: block;
+        margin-right: 15px;
+        color: #fff;
+    }
+
+    .container>.bottom>.sign_up-left>p.info{
+        font-weight: 400;
+        margin-bottom: 27px;
+        font-size: 14px;
+    }
+
+    .container>.bottom>.sign_up-left>a.button{
+        color: white;
+        text-decoration: none;
+        background-color: var(--yellow);
+        padding: 15px 90px;
+        border-radius: 5px;
+        box-shadow: 7px 9px 10px #52525236;
+        display: block;
+    }
+
+    /* Right */
+
+    .container>.bottom>.why_us-right{
+        background-color: #4abebd;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .container>.bottom>.why_us-right>h4{    
+        font-size: 19px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .container>.bottom>.why_us-right>.info{
+        font-size: 14px;
+        line-height: 19px;
+        color: #ffffffb8;
+    }
+
+
+    footer{
+        position:relative;
+        float: right;
+        font-size: 13px;
+    }
+}

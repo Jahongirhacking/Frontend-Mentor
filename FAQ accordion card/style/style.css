@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* 
+    font-family: 'Kumbh Sans', sans-serif;
+*/
+
+:root{
+    --desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    --grayish-blue: hsl(240, 6%, 50%);
+    --dark-graysih-blue: hsl(237, 12%, 33%);
+
+    --light-grayish-blue: hsl(0, 0%, 95%);
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--light-grayish-blue);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(214, 214, 214, 0.459);
+    border-radius: 10px;
+}
+
+.attribution { font-size: 11px; text-align: center; color: hsl(0, 0%, 93%); }
+.attribution a { color: hsl(0, 0%, 100%); }
+
+body{
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.card{
+    display: flex;
+    width: 64%;
+    background-color: var(--light-grayish-blue);
+    max-height: 39em;
+    height: 39em;
+    margin: 0 auto;
+    padding: 10px 0;
+    transform: translate(19px, 7px);
+    border-radius: 22px;
+    margin-top: 30px;
+
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-x: -11em;
+    background-position-y: center;
+}
+
+.card>.card__img, .card>.card__info{
+    flex: 1;
+}
+
+.card>.card__img{
+    overflow-x: hidden;
+}
+
+.card>.card__img>img.woman{
+    min-width: 180px;
+    width: 100%;
+    transform: translate(-55px, 70px);
+}
+
+.card>.card__info{
+    overflow: auto;
+    padding: 50px 2px 15px;
+    margin: 0 10px 0 32px;
+}
+
+.card>.card__info>h1{
+    font-size: 22pt;
+}
+
+.card>.card__info>.accordion{
+    margin-top: 20px;
+}
+
+.card>.card__info>.accordion>.accordion__item{
+    border-bottom: 1px solid rgb(199, 199, 199);
+    width: 78%;
+}
+
+.card>.card__info>.accordion>.accordion__item>.accordion__question>button{
+    background-color: transparent;
+    border: none;
+    padding: 14.5px 0px;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+}
+
+.card>.card__info>.accordion>.accordion__item>.accordion__question>button:hover>p{
+    color: var(--soft-red);
+}
+
+.card>.card__info>.accordion>.accordion__item>.accordion__question>button>p{
+    flex: 95%;
+    color: var(--dark-graysih-blue);
+    transition: 0.4s ease;
+}
+
+.card>.card__info>.accordion>.accordion__item>.accordion__question>button>img{
+    flex: 5%;
+}
+
+.card>.card__info>.accordion>.accordion__item.false>.accordion__collapse{
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+}
+
+.card>.card__info>.accordion>.accordion__item.false>.accordion__question>button>img{
+    transition: 0.4s ease;
+    transform: rotate(0deg);
+}
+
+.card>.card__info>.accordion>.accordion__item.true>.accordion__question>button{
+    font-weight: 700;
+}
+
+.card>.card__info>.accordion>.accordion__item.true>.accordion__question>button>img{
+    transition: 0.4s ease;
+    transform: rotate(180deg);
+}
+
+.card>.card__info>.accordion>.accordion__item>.accordion__collapse>.accordion__content{
+    margin-bottom: 16px;
+    color: var(--grayish-blue);
+}
+
+@keyframes box{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(-25px);}
+    100%{transform: translateX(0px);}
+}
+
+#box{
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    left: -100px;
+    animation: box 4s infinite ease;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 550px){
+    .card{
+        flex-direction: column;
+        width: 85%;
+        max-height: 43em;
+        height: 40em;
+        transform: unset;
+        text-align: center;
+        margin-top: 120px;
+        background-image: url("../images/bg-pattern-mobile.svg");
+        background-position-x: center;
+        background-position-y: 0;
+        background-size: 90%;
+    }
+
+    #box{
+        min-width: 90px;
+        width: 50%;
+        margin-top: -50px;
+        left: -30px;
+    }
+
+    .card>.card__img{
+        overflow: unset;
+        width: 80%;
+        margin: auto;
+        position: relative;
+    }
+
+    .card>.card__img>img.woman{
+        transform: translate(0, 0);
+        width: 100%;
+    }
+
+    .card>.card__info {
+        margin: 0 7px 0 7px;
+    }
+
+    .card>.card__info>.accordion>.accordion__item {
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+
+    .card>.card__img{
+        flex: 20%;
+        margin-top: -110px;
+    }
+
+    .card>.card__info{
+        flex: 80%;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 900px){
+    .card{
+        flex-direction: column;
+        width: 85%;
+        max-height: 43em;
+        height: 40em;
+        transform: unset;
+        text-align: center;
+        margin-top: 120px;
+        background-image: url("../images/bg-pattern-mobile.svg");
+        background-position-x: center;
+        background-position-y: 0;
+        background-size: 65%;
+    }
+
+    #box{
+        min-width: 90px;
+        width: 50%;
+        margin-top: -50px;
+        left: -30px;
+    }
+
+    .card>.card__img{
+        overflow: unset;
+        width: 80%;
+        margin: auto;
+        position: relative;
+    }
+
+    .card>.card__img>img.woman{
+        transform: translate(0, 0);
+        width: 100%;
+    }
+
+    .card>.card__info {
+        margin: 0 7px 0 7px;
+    }
+
+    .card>.card__info>.accordion>.accordion__item {
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+
+    .card>.card__img{
+        flex: 20%;
+        margin-top: -150px;
+        width: 55%;
+    }
+
+    .card>.card__info{
+        flex: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}

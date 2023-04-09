@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Dark-Blue);
+    background-image: url("../images/pexels-cátia-matos-1072179.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 25px;
+    font-family: 'Manrope', sans-serif;
+    color: var(--Light-Cyan);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.container{
+    width: 500px;
+    padding: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: var(--Dark-Grayish-Blue);
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.container>h2{
+    font-size: 15px;
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+.container>p{
+    max-height: 150px;
+    overflow: auto;
+}
+
+.container>.divider{
+    width: 100%;
+}
+
+.container>.button{
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    width: fit-content;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    line-height: 62px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    margin-left: -30px;
+    outline: none;
+}
+
+.button>i{
+    color: black;
+}
+
+
+@media (max-width: 500px) {
+    body{
+        width: 100vw;
+        overflow-y: auto;
+    }
+
+    .container{
+        width: 100vw;
+    }
+
+    .container>h2{
+        width: 87vw;
+    }
+
+    .container>.divider{
+        width: 87vw;
+    }
+
+    .divider>img{
+        width: 100%;
+    }
+
+    .container>p{
+        width: 87vw;
+        max-height: 250px;
+    }
+}

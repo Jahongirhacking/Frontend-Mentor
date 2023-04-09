@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="info">
+      <div class="img">
+        <a href="#"><div class="overlay"><i class="fa-solid fa-eye"></i></div></a>
+        <img src="./images/image-equilibrium.jpg" alt="equilibrium">
+      </div>
+      <h2 class="link">Equilibrium #3429</h2>
+      <p class="thin">Our Equilibrium collection promotes balance and calm.</p>
+      <section>
+        <p class="eth"><i class="fa-brands fa-ethereum"></i> 0.041 ETH</p>
+        <p class="time thin"><i class="fa-solid fa-clock"></i> 3 days left</p>
+      </section>
+    </div>
+    <div class="profile">
+      <div class="avatar">
+        <img src="./images/image-avatar.png" alt="avatar">
+      </div>
+      <p class="thin">Creation of <a href="#" class="link">Jules Wyvern</a></p>
+    </div>
+  </div>
+
+  <div class="attribution">
+    &copy; Bulalar Team - Challenge by <a href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://jahongirhacking.netlify.app/" class="link">Jahongir Hayitov</a>.
+  </div>
+
+  <script>
+    function overlay(){
+
+      document.querySelector(".img>a>.overlay").style.width=`${document.querySelector(".img>img").width}px`;
+      document.querySelector(".img>a>.overlay").style.height=`${document.querySelector(".img>img").height}px`;
+      document.querySelector(".img>a>.overlay").style.lineHeight=`${document.querySelector(".img>img").height+20}px`;
+    }
+    window.addEventListener("load",overlay);   
+  </script>
+</body>
+</html>

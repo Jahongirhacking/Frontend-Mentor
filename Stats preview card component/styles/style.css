@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/*
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+*/
+
+html{
+    overflow-x: hidden;
+}
+
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%); /*(main background)*/
+    --dark-desaturated-blue: hsl(244, 38%, 16%); /*(card background)*/
+    --soft-violet: hsl(277, 64%, 61%); /*(accent)*/
+
+    --white: hsl(0, 0%, 100%); /*(main heading, stats)*/
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+}
+
+.attribution {
+    margin: 30px auto;
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: var(--soft-violet);
+}
+
+body{
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Card */
+
+.container{
+    margin-top: 78px;
+}
+
+.container>.card{
+    display: flex;
+    width: 1110px;
+    margin: auto;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 6px;
+    justify-content: space-between;
+}
+
+.container>.card>.card-body{
+    width: 51%;
+    padding: 6.5%;
+}
+
+.container>.card>.card-body>h1{
+    font-size: 27pt;
+}
+
+.container>.card>.card-body>p{
+    margin-top: 27px;
+    line-height: 24px;
+    width: 85%;
+    color: #ffffff91;
+}
+
+h1>span{
+    color: var(--soft-violet);
+}
+
+.container>.card>.card-body>.row{
+    display: flex;
+    width: 84%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 74px;
+}
+
+.container>.card>.card-body>.row>.stat>h3{
+    font-size: 19.5pt;
+}
+
+.container>.card>.card-body>.row>.stat>p{
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #69677b;
+    font-size: 10pt;
+    margin-top: 6px;
+}
+
+.container>.card>.card-body>.row>.stat{
+    display: grid;
+}
+
+.container>.card>.card-img{
+    position: relative;
+    width: 49%;
+    background-image: url('../images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 6px 6px 0;
+}
+
+
+.container>.card>.card-img>.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277deg 97% 34% / 49%);
+    border-radius: 0 6px 6px 0;
+}
+
+
+@media (max-width: 990px){
+    body{
+        height: auto;
+    }
+
+    .container{
+        margin-top: 20px;
+    }
+
+    .container>.card{
+        flex-direction: column;
+        width: 90%;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .container>.card>.card-body {
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    .card-body>*{
+        margin: auto;
+    }
+
+    .container>.card>.card-img{
+        background-image: url('../images/image-header-mobile.jpg');
+        width: 100%;
+        height: 40vh;
+        border-radius: 6px 6px 0 0;
+        order: 1;
+    }
+
+    .container>.card>.card-body>.row{
+        flex-direction: column;
+        margin: 40px auto 20px;
+    }
+
+    .container>.card>.card-body>.row>.stat {
+        display: grid;
+        margin-bottom: 25px;
+    }
+}

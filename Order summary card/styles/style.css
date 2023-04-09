@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #E0E8FF;
+}
+
+.back-img{
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --paleblue:hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+
+.container{
+    background-color: white;
+    width: 450px;
+    position: absolute;
+    border-radius: 20px;
+    left: 50%;
+    top: 50%;
+    margin-left: -225px;
+    margin-top: -349px;
+    box-shadow: 0 5px 25px hsl(245deg 75% 52% / 34%);
+}
+
+
+/* Card Header */
+
+.container>.card>.card-header>img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    transition: 0.4s ease;
+}
+
+.container>.card>.card-header>img:hover{
+    transform: scale(1.1);
+}
+
+.container>.card>.card-header{
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Card Body */
+.container>.card>.card-body{
+    padding: 10px;
+    text-align: center;
+}
+
+
+.container>.card>.card-body>*{
+    display: block;
+}
+
+.container>.card>.card-body>h2{
+    color: var(--dark-blue);
+    font-size: 22pt;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 29px;
+}
+
+.container>.card>.card-body>p.info{
+    color: var(--desaturated-blue);
+    width: 311px;
+    margin: auto;
+    margin-top: 16px;
+    font-size: 12.5pt;
+    line-height: 26px;
+}
+
+.container>.card>.card-body>.plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    padding: 25px 22px;
+    margin: auto;
+    margin-top: 20px;
+    width: 81%;
+}
+
+.container>.card>.card-body>.plan>div{
+    display: flex;
+    align-items: center;
+}
+
+.container>.card>.card-body>.plan>div>.annual{
+    display: grid;
+    margin-left: 18px;
+}
+
+.container>.card>.card-body>.plan>div>.annual>h3{
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 13pt;
+    margin-bottom: 4px;
+}
+
+
+
+.container>.card>.card-body>.plan>div>.annual>p{
+    color: var(--desaturated-blue);
+    font-weight: 500;
+    font-size: 13pt;
+
+}
+
+.container>.card>.card-body>.plan>a{
+    color: var(--brightblue);
+    font-weight: 700;
+    font-size: 10pt;
+    transition: 0.4s ease;
+    transition-property: text-decoration, color;
+}
+
+.container>.card>.card-body>.plan>a:hover{
+    text-decoration: none;
+    color: #766CF1;
+}
+
+.container>.card>.card-body>.button-proceed{
+    color: white;
+    background-color: var(--brightblue);
+    text-decoration: none;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 30px;
+    width: 354px;
+    padding: 15px 0px;
+    border-radius: 10px;
+    box-shadow: 0 13px 23px hsl(245deg 75% 52% / 34%);
+    transition: 0.4s ease;
+    transition-property: background-color;
+}
+
+.container>.card>.card-body>.button-proceed:hover{
+    background-color: #766CF1;
+}
+
+.container>.card>.card-body>.button-cancel{
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 31px;
+    margin-bottom: 38px;
+    transition: 0.4s ease;
+    transition-property: color;
+}
+
+.container>.card>.card-body>.button-cancel:hover{
+    color: var(--dark-blue);
+}
+
+
+.attribution{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    body{
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-family: 'Red Hat Display', sans-serif;
+        background-color: #E0E8FF;
+    }
+    
+    .back-img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url('../images/pattern-background-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        width: 100%;
+    }
+    
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    :root{
+        --paleblue:hsl(225, 100%, 94%);
+        --brightblue: hsl(245, 75%, 52%);
+        --very-pale-blue: hsl(225, 100%, 98%);
+        --desaturated-blue: hsl(224, 23%, 55%);
+        --dark-blue: hsl(223, 47%, 23%);
+    }
+    
+    
+    .container{
+        background-color: white;
+        width: 90%;
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: 0 5px 25px hsl(245deg 75% 52% / 34%);
+    }
+    
+    
+    /* Card Header */
+    
+    .container>.card>.card-header>img{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        transition: 0.4s ease;
+    }
+    
+    .container>.card>.card-header>img:hover{
+        transform: scale(1.1);
+    }
+    
+    .container>.card>.card-header{
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    /* Card Body */
+    .container>.card>.card-body{
+        padding: 10px;
+        text-align: center;
+    }
+    
+    
+    .container>.card>.card-body>*{
+        display: block;
+    }
+    
+    .container>.card>.card-body>h2{
+        font-size: 16pt;
+        margin-top: 16px;
+    }
+    
+    .container>.card>.card-body>p.info{
+        width: 70%;
+        font-size: 10.5pt;    
+        line-height: 23px;
+    }
+    
+    .container>.card>.card-body>.plan{
+        width: 90%;
+    }
+    
+    
+    .container>.card>.card-body>.plan>div>.annual{
+        margin-left: 18px;
+    }
+    
+    .container>.card>.card-body>.plan>div>.annual>h3{
+        font-size: 10pt;
+        margin-bottom: 4px;
+    }
+    
+    
+    
+    .container>.card>.card-body>.plan>div>.annual>p{
+        color: var(--desaturated-blue);
+        font-weight: 500;
+        font-size: 10pt;    
+    
+    }
+    
+    .container>.card>.card-body>.plan>a{
+        font-size: 9pt;
+    }
+    
+    .container>.card>.card-body>.plan>a:hover{
+        text-decoration: none;
+        color: #766CF1;
+    }
+    
+    .container>.card>.card-body>.button-proceed{
+        color: white;
+        background-color: var(--brightblue);
+        text-decoration: none;
+        font-weight: 700;
+        margin: auto;
+        margin-top: 30px;
+        width: 90%;
+        padding: 15px 0px;
+        border-radius: 10px;
+        box-shadow: 0 13px 23px hsl(245deg 75% 52% / 34%);
+        transition: 0.4s ease;
+        transition-property: background-color;
+    }
+    
+    .container>.card>.card-body>.button-proceed:hover{
+        background-color: #766CF1;
+    }
+    
+    .container>.card>.card-body>.button-cancel{
+        color: var(--desaturated-blue);
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 31px;
+        margin-bottom: 38px;
+        transition: 0.4s ease;
+        transition-property: color;
+    }
+    
+    .container>.card>.card-body>.button-cancel:hover{
+        color: var(--dark-blue);
+    }
+    
+    
+    .attribution{
+        position: relative;
+        margin-top: 30px;
+        float: right;
+    }
+}

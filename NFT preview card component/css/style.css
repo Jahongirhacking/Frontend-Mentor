@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-gap: 20px;
+    border-radius: 20px;
+    width: 350px;
+    margin: auto;
+    padding: 25px;
+    background-color: var(--Very-dark-blue-card);
+    box-shadow: -5px 30px 30px #000000b0;
+}
+
+.container>.info{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.container>.info>.img{
+    width: 100%;
+    position: relative;
+}
+
+.container>.info>.img>a>.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(178, 100%, 50%, 0.514);
+    text-align: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border-radius: 10px;
+}
+
+.overlay>i{
+    color: var(--White);
+    font-size: 40px;
+}
+
+.overlay:hover{
+    opacity: 1!important;
+}
+
+.container>.info>.img>img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.container>.info>section{
+    display: flex;
+    justify-content: space-between;
+}
+
+section>.eth{
+    color: var(--Cyan);
+    font-weight: 700;
+}
+
+section>p>i{
+    margin-right: 7px;
+}
+
+
+.container>.profile{
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+
+.container>.profile>.avatar>img{
+    width: 100%;
+}
+
+.thin{
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+.thin>a{
+    color: var(--White);
+    font-weight: 700;
+}
+
+.profile{
+    border-top: 1px solid var(--Very-dark-blue-line);
+    padding-top: 15px;
+}
+
+.avatar>img{
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.attribution a {
+    color: hsl(0, 0%, 100%); 
+    text-decoration: underline;
+}
+
+.link{
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: var(--Cyan)!important;
+}
+
+@media (max-width:300px) {
+    body{
+        width: 300px;
+    }
+}

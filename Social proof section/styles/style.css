@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--white);
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 28px;
+  }
+
+.attribution a {
+    color: var(--very-dark-magenta)
+}
+
+/* Main */
+
+.container{
+    padding: 10vh 10vw 3vh;
+}
+
+.container>header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container>header>.info{
+    width: 50%;
+}
+
+.container>header>.info>h1{
+    padding: 25px 120px 10px 19px;
+    letter-spacing: -2.5px;
+    line-height: 46px;
+    font-size: 34pt;
+    color: var(--very-dark-magenta);
+}
+
+.container>header>.info>p{
+    padding: 5px 0 6px 18px;
+    line-height: 21px;
+    font-size: 13px;
+    width: 82%;
+    color: var(--dark-grayish-magenta);
+}
+
+.container>header>.how-to-rate{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 22px;
+}
+
+.container>header>.how-to-rate>.rate{
+    display: flex;
+    align-items: center;
+    background-color: var(--light-grayish-magenta);
+    margin-left: 13px;
+    width: 77.7%;
+    border-radius: 10px;
+}
+
+.container>header>.how-to-rate>.rate:nth-child(2){
+    margin-left: 55px;
+}
+
+.container>header>.how-to-rate>.rate:nth-child(3){
+    margin-left: 98px;
+}
+
+.container>header>.how-to-rate>.rate>.stars{
+    padding: 15px 29px;
+    letter-spacing: 2px;
+}
+
+.container>header>.how-to-rate>.rate>p{
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+/* Cards */
+
+.container>.cards{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 9vh;
+}
+
+.container>.cards>.card{
+    background-color: var(--very-dark-magenta);
+    width: 30.3%;
+    color: var(--white);
+    padding: 33px 28px;
+    border-radius: 10px;
+    height: 13.3rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container>.cards>.card:nth-child(2){
+    margin: 0 2.1vw;
+    margin-top: 2vh;
+}
+
+.container>.cards>.card:nth-child(3){
+    margin-top: 4vh;
+}
+
+.container>.cards>.card>.card-header{
+    display: flex;
+    align-items: center;
+}
+
+.container>.cards>.card>.card-header>img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.container>.cards>.card>.card-header>.who>h3{
+    font-size: 9pt;
+}
+
+.container>.cards>.card>.card-header>.who>p{
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--soft-pink);
+}
+
+.container>.cards>.card>.card-body>p{
+    margin-top: 24px;
+    font-size: 11.6px;
+    line-height: 20px;
+}
+
+
+
+@media (max-width:750px) {
+    .container{
+        text-align: center;
+    }
+
+    .container>header{
+        flex-direction: column;
+    }
+
+    .container>header>.info{
+        width: 100%;
+    }
+
+    .container>header>.info>h1{
+        width: 100%;
+        padding: 0;
+        line-height: 36px;
+        font-size: 27pt;
+    }
+
+    .container>header>.info>p{
+        padding: 0;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+
+    .container>header>.how-to-rate {
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    .container>header>.how-to-rate>.rate {
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+        padding: 12px 0px;
+    }
+
+    .container>header>.how-to-rate>.rate>.stars{
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .container>header>.how-to-rate>.rate:nth-child(2) {
+        margin-left: 0;
+        margin: 15px 0;
+    }
+
+    .container>header>.how-to-rate>.rate:nth-child(3) {
+        margin-left: 0;
+    }
+
+
+    .container>.cards{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container>.cards>.card{
+        width: 100%;
+        height: 13.5rem;
+    }
+
+    .container>.cards>.card:nth-child(2){
+        margin: 25px auto;
+    }
+
+    .container>.cards>.card:nth-child(3){
+        margin: auto;
+    }
+    
+
+    .attribution {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width:751px) and (max-width:1100px) {
+    .container{
+        text-align: center;
+    }
+
+    .container>header{
+        flex-direction: column;
+    }
+
+    .container>header>.info{
+        width: 100%;
+    }
+
+    .container>header>.info>h1{
+        width: 100%;
+        padding: 0;
+        line-height: 70px;
+        font-size: 50pt;
+    }
+
+    .container>header>.info>p{
+        padding: 0;
+        width: 100%;
+        margin-top: 40px;
+        font-size: 20pt;
+        line-height: 42px;
+    }
+
+
+    .container>header>.how-to-rate {
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    .container>header>.how-to-rate>.rate {
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+        padding: 18px 0px;
+    }
+
+    .container>header>.how-to-rate>.rate>.stars{
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .container>header>.how-to-rate>.rate>p {
+        font-size: 14pt;
+    }
+
+    .container>header>.how-to-rate>.rate:nth-child(2) {
+        margin-left: 0;
+        margin: 15px 0;
+    }
+
+    .container>header>.how-to-rate>.rate:nth-child(3) {
+        margin-left: 0;
+    }
+
+
+    .container>.cards{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container>.cards>.card{
+        width: 100%;
+        height: 13.5rem;
+    }
+
+    .container>.cards>.card:nth-child(2){
+        margin: 25px auto;
+    }
+
+    .container>.cards>.card:nth-child(3){
+        margin: auto;
+    }
+
+    .container>.cards>.card>.card-header>img {
+        width: 55px;
+    }
+
+    .container>.cards>.card>.card-header>.who>h3 {
+        font-size: 12pt;
+    }
+
+    .container>.cards>.card>.card-header>.who>p {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .container>.cards>.card>.card-body>p {
+        margin-top: 24px;
+        font-size: 16.6px;
+        line-height: 30px;
+    }
+    
+
+    .attribution {
+        font-size: 13px;
+        margin-top: 50px;
+    }
+}
