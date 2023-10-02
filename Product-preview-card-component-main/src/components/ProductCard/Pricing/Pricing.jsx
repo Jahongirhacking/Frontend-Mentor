@@ -2,10 +2,10 @@ import IPricing from "./interface";
 
 const Pricing = ({ price, oldPrice }) => {
   return (
-    <summary className="product-pricing">
+    <section className="product-pricing">
       <strong className="product__price">${price}</strong>
       <del className="product__oldPrice">${oldPrice}</del>
-    </summary>
+    </section>
   );
 };
 

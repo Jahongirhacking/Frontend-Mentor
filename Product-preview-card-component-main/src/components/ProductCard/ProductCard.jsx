@@ -26,14 +26,14 @@ const ProductCard = (productCard) => {
   );
   return (
     <>
-      <div className="product-card">
+      <article className="product-card">
         <ProductImage desktopImage={desktopImage} mobileImage={mobileImage} />
         <ProductInfo
           {...productCard}
           isOnCart={isOnCart}
           handleClick={handleClick}
         />
-      </div>
+      </article>
       {isClicked && modal}
     </>
   );

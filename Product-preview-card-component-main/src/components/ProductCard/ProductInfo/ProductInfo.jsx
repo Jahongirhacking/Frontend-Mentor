@@ -6,12 +6,13 @@ import Heading from "../Heading";
 const ProductInfo = (productCard) => {
   const { name, type, info, price, oldPrice, handleClick, isOnCart } =
     productCard;
+
   return (
-    <article className="product-info">
+    <aside className="product-info">
       <Heading name={name} type={type} info={info} />
       <Pricing price={price} oldPrice={oldPrice} />
       <ProductButton handleClick={handleClick} isOnCart={isOnCart} />
-    </article>
+    </aside>
   );
 };
 
