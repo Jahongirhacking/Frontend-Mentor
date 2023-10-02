@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Modal from "../../Modal";
 import IModal from "../../Modal/interface";
 
-const ProductModal = ({ children }) => {
+const ProductModal = ({ children, modalView, isOnCart }) => {
   const [isShowModal, setIsShowModal] = useState(false);
 
   useEffect(() => {
@@ -14,9 +14,9 @@ const ProductModal = ({ children }) => {
       clearTimeout(timeoutID);
       setIsShowModal(false);
     };
-  }, []);
+  }, [isOnCart]);
 
-  return isShowModal && <Modal>{children}</Modal>;
+  return isShowModal && <Modal modalView={modalView}>{children}</Modal>;
 };
 
 ProductModal.propTypes = IModal;

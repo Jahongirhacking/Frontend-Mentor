@@ -6,12 +6,24 @@ import ProductModal from "./ProductModal";
 
 const ProductCard = (productCard) => {
   const [isOnCart, setIsOnCart] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
+    setIsClicked(true);
     setIsOnCart((prev) => !prev);
   };
 
   const { desktopImage, mobileImage } = productCard;
+
+  const modal = isOnCart ? (
+    <ProductModal modalView={"success"} isOnCart={isOnCart}>
+      Your product is successfully added to Cart!
+    </ProductModal>
+  ) : (
+    <ProductModal modalView={"danger"} isOnCart={isOnCart}>
+      The product is removed from Cart!
+    </ProductModal>
+  );
   return (
     <>
       <div className="product-card">
@@ -22,9 +34,7 @@ const ProductCard = (productCard) => {
           handleClick={handleClick}
         />
       </div>
-      {isOnCart && (
-        <ProductModal>Your product is successfully added to Cart!</ProductModal>
-      )}
+      {isClicked && modal}
     </>
   );
 };

@@ -5,14 +5,21 @@
   background-color: rgba(255, 255, 255, 0.603);
   border-radius: 4px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  color: $dark-cyan;
   font-weight: 600;
   left: 50%;
   margin-left: -160px;
   position: fixed;
-  padding: 5px 10px;
+  padding: 8px 10px;
   text-align: center;
   top: 20px;
   width: 320px;
   z-index: 1;
+}
+
+.modal.success {
+  color: $dark-cyan;
+}
+
+.modal.danger {
+  color: $red;
 }

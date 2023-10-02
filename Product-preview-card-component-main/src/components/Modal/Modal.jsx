@@ -1,7 +1,7 @@
 import IModal from "./interface";
 
-const Modal = ({ children }) => {
-  return <section className="modal">{children}</section>;
+const Modal = ({ children, modalView }) => {
+  return <section className={`modal ${modalView}`}>{children}</section>;
 };
 
 Modal.propTypes = IModal;
