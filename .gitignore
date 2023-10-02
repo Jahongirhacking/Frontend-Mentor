@@ -1,2 +1,5 @@
 # Local Netlify folder
 .netlify
+# Product Preview Card
+product-preview-card-component-main/node_modules
+product-preview-card-component-main/dist

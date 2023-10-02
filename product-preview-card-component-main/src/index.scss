@@ -20,12 +20,9 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: auto;
   justify-content: center;
   min-height: 100vh;
+  padding: 20px;
   width: 100%;
-
-  @media (max-width: 600px) {
-    padding: 20px;
-    height: auto;
-  }
 }
