@@ -1,0 +1,19 @@
+@import "/src/styles/colors.scss";
+
+.product-card {
+  align-items: center;
+  background-color: $white;
+  border-radius: 0.55rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  font-size: 20px;
+  height: 410px;
+  overflow: hidden;
+  width: 547px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+    width: 280px;
+  }
+}

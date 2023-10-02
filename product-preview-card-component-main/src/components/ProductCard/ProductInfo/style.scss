@@ -1,0 +1,14 @@
+.product-info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: inherit;
+  justify-content: center;
+  padding: 20px 29px;
+  width: 50%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/fonts.scss";
+
+.product-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  .product__type {
+    color: $dark-grayish-blue;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 4.3px;
+    order: 1;
+  }
+
+  .product__name {
+    color: $very-dark-blue;
+    font-family: $Fraunces;
+    font-size: 1.85rem;
+    line-height: 1.85rem;
+    order: 2;
+    width: 95%;
+  }
+
+  .product__info {
+    color: $dark-grayish-blue;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.35rem;
+    order: 3;
+  }
+}

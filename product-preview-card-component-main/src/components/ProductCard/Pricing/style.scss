@@ -1,0 +1,22 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/fonts.scss";
+
+.product-pricing {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .product__price {
+    color: $dark-cyan;
+    font-family: $Fraunces;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .product__oldPrice {
+    color: $dark-grayish-blue;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}

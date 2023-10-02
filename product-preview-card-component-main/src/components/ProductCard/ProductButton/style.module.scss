@@ -1,0 +1,16 @@
+@import "/src/styles/colors.scss";
+
+.product-btn {
+  color: $white;
+  background-color: $dark-cyan;
+  width: 100%;
+  transition: 0.4s ease background-color;
+}
+
+.product-btn:hover {
+  background-color: $very-dark-blue;
+}
+
+.product-btn.active {
+  background-color: rgb(160, 0, 0);
+}
